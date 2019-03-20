@@ -110,6 +110,11 @@ pipeline {
         archiveArtifacts (allowEmptyArchive: true,
                             artifacts: 'dist/*whl',
                             fingerprint: true)
+        // Record compiler warnings and static analysis results
+        recordIssues (
+            enabledForFailure: true,
+            aggregatingResults: true,
+            )
         }
       } // post
     } // stage: build package
