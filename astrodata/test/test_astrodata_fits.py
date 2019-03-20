@@ -188,6 +188,9 @@ class TestAstrodataFits:
             else:
                 raise KeyError
 
+        assert False
+
+
     @pytest.mark.parametrize("filename", testfiles)
     def test_writes_to_new_fits(self, filename):
 

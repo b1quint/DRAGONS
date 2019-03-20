@@ -60,7 +60,7 @@ pipeline {
       steps {
         echo "PEP8 style check"
         sh  ''' source activate ${BUILD_TAG}
-                pylint --disable=C astrodata || true
+                pylint --exit-zero --rcfile=
                 '''
       }
     } // stage: static code metrics
